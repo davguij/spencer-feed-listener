@@ -1,0 +1,25 @@
+{
+  "name": "spencer-feed-listener",
+  "version": "1.0.0",
+  "description": "N/A",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davguij/spencer-feed-listener.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davguij/spencer-feed-listener/issues"
+  },
+  "homepage": "https://github.com/davguij/spencer-feed-listener#readme",
+  "dependencies": {
+    "superfeedr": "^0.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.18.0"
+  }
+}
