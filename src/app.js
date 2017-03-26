@@ -1,14 +1,14 @@
-const Superfeedr = require('superfeedr');
+let express = require('express');
+let app = express();
+let bodyParser = require('body-parser')
 
-const feedClient = new Superfeedr("login", "password");
+app.use(bodyParser.json());       // to support JSON-encoded bodies
 
-feedClient.on('connected', () => {
-	feedClient.list(1, (err, subs) => {
-		if (!err) {
-			console.log('Error:');
-			console.log(err);
-		} else {
-			console.log(subs);
-		}
-	});
+app.post('/webhook', function (req, res) {
+	console.log(JSON.stringify(req.body));
+	res.sendStatus(200);
+});
+
+app.listen(8888, function () {
+	console.log('App listening on port 8888!');
 });
